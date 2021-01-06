@@ -14,10 +14,17 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-
-plugins:
+  - jekyll-paginate
   - jekyll-responsive-image
 
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - Rakefile
+  
 responsive_image:
   # [Required]
   # Path to the image template.
