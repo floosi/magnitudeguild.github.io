@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const players = document.querySelectorAll('img.' + value.name);
     for (let i = 0; i < players.length; i++) {
       players[i].src = value.src;
+      players[i].alt = value.name;
     }
   }
 

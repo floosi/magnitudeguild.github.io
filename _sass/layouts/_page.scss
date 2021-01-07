@@ -1,0 +1,37 @@
+#page {
+  position: relative;
+
+  main {
+    padding-left: 360px;
+  }
+}
+
+.players {
+  ul {
+    li {
+      position: relative;
+      padding: 25px;
+      background: $color-grey-900;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid $color-grey-900;
+
+      img {
+        position: absolute;
+        opacity: .3;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: auto;
+        transform: translateY(-50%) translateX(-50%);
+      }
+
+      strong {
+        position: relative;
+        z-index: 2;
+        text-shadow: 0 0 20px $color-grey-900;
+        font-size: $font-size-l;
+      }
+    }
+  }
+}

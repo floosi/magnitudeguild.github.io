@@ -16,6 +16,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-responsive-image
+  - jekyll-autoprefixer
 
 exclude:
   - vendor
@@ -24,7 +25,7 @@ exclude:
   - LICENSE
   - README.md
   - Rakefile
-  
+
 responsive_image:
   # [Required]
   # Path to the image template.
@@ -81,3 +82,7 @@ responsive_image:
   # images. This is useful for resizing images which will be referenced from stylesheets.
   extra_images:
     - uploads/*/*/*/*.{jpeg,jpg,svg}
+
+autoprefixer:
+  browsers:
+  - last 2 versions

@@ -12,10 +12,12 @@
     {% feed_meta %}
     {% seo %}
   </head>
-  <body>
-
-    {% include header.html %}
-
-    {{ content }}
+  <body class="section">
+    <div id="page" class="container">
+      {% include header.html %}
+      <main class="section-pv">
+        {{ content }}
+      </main>
+    </div>
   </body>
 </html>

@@ -1,0 +1,63 @@
+// Clear after (not all clearfix need this also)
+@mixin clearfix {
+  clear: both;
+}
+
+// Rem output with px fallback
+@mixin font-size($size-value: 1) {
+  font-size: ($size-value * 16) * 1px;
+  font-size: $size-value * 1rem;
+}
+
+@mixin transition($time) {
+  transition: all ease $time;
+}
+@mixin container-columns {
+  grid-template-columns: 1fr minmax(auto, 82em) 1fr;
+
+	// @include breakpoint($bp-medium) {
+	// 	grid-template-columns: 1fr repeat(2, minmax(auto, 36em)) 1fr;
+	// }
+}
+
+@mixin center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin equal {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: visible;
+  position: relative;
+}
+
+@mixin img-cover {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+@mixin linear-gradient($color-left, $color-right) {
+  background: $color-right;
+  background: linear-gradient(to right, $color-left 0%, $color-right 100%);
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    @content;
+  }
+  &::-moz-placeholder { // Firefox 19+
+    @content;
+  }
+  &:-ms-input-placeholder { // IE 10+
+    @content;
+  }
+  &:-moz-placeholder { // Firefox 18-
+    @content;
+  }
+  &::placeholder {
+    @content;
+  }
+}

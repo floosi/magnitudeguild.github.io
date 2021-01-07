@@ -1,11 +1,44 @@
 //Normalize
-@import "_normalize";
+@import 'normalize';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+html {
+  // -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: $color-grey-700;
+  color: $color-grey-200;
+  font-family: $font-fam-body;
+  font-size: 16px;
+  font-weight: $font-weight-base;
+  position: relative;
+  // @include breakpoint($bp-medium) {
+  //   font-size: 17px;
+  // }
+  // @include breakpoint($bp-xl) {
+  //   font-size: 18px;
+  // }
+}
 
 //Typography
-@import "_typography";
+@import 'typography';
 
 //Structure
-@import "_structure";
+@import 'structure';
 
 //Elements
-@import "_elements";
+@import 'elements';

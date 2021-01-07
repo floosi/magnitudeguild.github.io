@@ -1,4 +1,6 @@
 - name: Home
   link: /
 - name: Roster
-  link: /roster
+  link: /roster/
+- name: Apply
+  link: /apply/

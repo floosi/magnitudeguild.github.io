@@ -1,0 +1,40 @@
+nav {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    margin: 10px 0;
+    padding: 10px 0;
+    font-size: $font-size-m;
+    color: $color-grey-100;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    position: relative;
+    text-decoration: none;
+
+    &::before {
+      display: block;
+      content: '';
+      height: 2px;
+      width: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: $color-blue;
+      @include transition(0.2s);
+    }
+
+    &:hover {
+      &::before {
+        width: 40px;
+      }
+    }
+
+    &.current {
+      &::before {
+        width: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+header {
+  position: fixed;
+  width: 280px;
+  background: $color-grey-800;
+  padding: 0 40px;
+  height: 100vh;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    content: '';
+    display: block;
+    background: $color-grey-900;
+    z-index: -1;
+  }
+
+  .site-branding {
+    img {
+      width: 80px;
+    }
+  }
+}

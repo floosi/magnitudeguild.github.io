@@ -11,35 +11,34 @@ title: Roster
 <section class="players">
   <div class="container">
     <h2>Tanks</h2>
-    <ul>
+    <ul class="col col-3">
       {% for player in tanks %}
         <li class="{{ player.class | slugify: "latin" }}">
-          <h3>{{ player.name }}</h3>
-          <p>{{ player.class }}</p>
-          <img class="{{ player.class | slugify: "latin" }}" alt="">
+          <img class="{{ player.class | slugify: "latin" }}">
+          <strong>{{ player.name }}</strong>
         </li>
       {% endfor %}
     </ul>
   </div>
   <div class="container">
     <h2>Healers</h2>
-    <ul>
+    <ul class="col col-3">
       {% for player in healers %}
         <li class="{{ player.class | slugify: "latin" }}">
-          <h3>{{ player.name }}</h3>
-          <p>{{ player.class }}</p>
+          <img class="{{ player.class | slugify: "latin" }}">
+          <strong>{{ player.name }}</strong>
         </li>
       {% endfor %}
     </ul>
   </div>
   <div class="container">
     <h2>Damage Dealers</h2>
-    <ul>
+    <ul class="col col-3">
       {% for player in site.players %}
         {% if player.role == 'DPS' %}
           <li class="{{ player.class | slugify: "latin" }}">
-            <h3>{{ player.name }}</h3>
-            <p>{{ player.class }}</p>
+            <img class="{{ player.class | slugify: "latin" }}">
+            <strong>{{ player.name }}</strong>
           </li>
         {% endif %}
       {% endfor %}
