@@ -2,3 +2,14 @@ ul {
   padding-left: 20px;
   margin-left: 10px;
 }
+
+a.button,
+button {
+  border: 2px solid $color-blue;
+  background: $color-grey-900;
+  text-align: center;
+
+  &::before {
+    display: none;
+  }
+}

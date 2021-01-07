@@ -1,6 +1,7 @@
+- name: Apply
+  link: /apply/
+  class: button
 - name: Home
   link: /
 - name: Roster
   link: /roster/
-- name: Apply
-  link: /apply/

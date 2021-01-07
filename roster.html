@@ -9,7 +9,7 @@ title: Roster
 <h1>{{ page.title }}</h1>
 
 <section class="players">
-  <div class="container">
+  <div class="container pb">
     <h2>Tanks</h2>
     <ul class="col col-3">
       {% for player in tanks %}
@@ -23,7 +23,7 @@ title: Roster
       {% endfor %}
     </ul>
   </div>
-  <div class="container">
+  <div class="container pv">
     <h2>Healers</h2>
     <ul class="col col-3">
       {% for player in healers %}
@@ -37,7 +37,7 @@ title: Roster
       {% endfor %}
     </ul>
   </div>
-  <div class="container">
+  <div class="container pv">
     <h2>Damage Dealers</h2>
     <ul class="col col-3">
       {% for player in site.players %}
