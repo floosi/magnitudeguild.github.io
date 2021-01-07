@@ -2,32 +2,33 @@
 title: Roster
 ---
 
+{% assign tanks = site.players | where: "role", "Tank" %}
+{% assign healers = site.players | where: "role", "Healer" %}
+{% assign dps = site.players | where: "role", "DPS" %}
+
 <h1>{{ page.title }}</h1>
 
 <section class="players">
   <div class="container">
     <h2>Tanks</h2>
     <ul>
-      {% for player in site.players %}
-        {% if player.role == 'Tank' %}
-          <li class="{{ player.class | slugify: "latin" }}">
-            <h3>{{ player.name }}</h3>
-            <p>{{ player.class }}</p>
-          </li>
-        {% endif %}
+      {% for player in tanks %}
+        <li class="{{ player.class | slugify: "latin" }}">
+          <h3>{{ player.name }}</h3>
+          <p>{{ player.class }}</p>
+          <img class="{{ player.class | slugify: "latin" }}" alt="">
+        </li>
       {% endfor %}
     </ul>
   </div>
   <div class="container">
     <h2>Healers</h2>
     <ul>
-      {% for player in site.players %}
-        {% if player.role == 'Healer' %}
-          <li class="{{ player.class | slugify: "latin" }}">
-            <h3>{{ player.name }}</h3>
-            <p>{{ player.class }}</p>
-          </li>
-        {% endif %}
+      {% for player in healers %}
+        <li class="{{ player.class | slugify: "latin" }}">
+          <h3>{{ player.name }}</h3>
+          <p>{{ player.class }}</p>
+        </li>
       {% endfor %}
     </ul>
   </div>

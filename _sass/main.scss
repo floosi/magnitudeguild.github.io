@@ -1,3 +1,14 @@
-.current {
-  color: green;
-}
+//Variables
+@import "variables/variables";
+
+//Mixins
+@import "mixins/mixins";
+
+//Base
+@import "base/base";
+
+//Layouts
+@import "layouts/layouts";
+
+//Animations
+@import "animations/animations"
