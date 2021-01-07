@@ -14,7 +14,10 @@ title: Roster
     <ul class="col col-3">
       {% for player in tanks %}
         <li class="{{ player.class | slugify: "latin" }}">
-          <img class="{{ player.class | slugify: "latin" }}">
+          <picture class="{{ player.class | slugify: "latin" }}">
+            <source type="image/webp">
+            <img>
+          </picture>
           <strong>{{ player.name }}</strong>
         </li>
       {% endfor %}
@@ -25,7 +28,10 @@ title: Roster
     <ul class="col col-3">
       {% for player in healers %}
         <li class="{{ player.class | slugify: "latin" }}">
-          <img class="{{ player.class | slugify: "latin" }}">
+          <picture class="{{ player.class | slugify: "latin" }}">
+            <source type="image/webp">
+            <img>
+          </picture>
           <strong>{{ player.name }}</strong>
         </li>
       {% endfor %}
@@ -37,7 +43,10 @@ title: Roster
       {% for player in site.players %}
         {% if player.role == 'DPS' %}
           <li class="{{ player.class | slugify: "latin" }}">
-            <img class="{{ player.class | slugify: "latin" }}">
+            <picture class="{{ player.class | slugify: "latin" }}">
+              <source type="image/webp">
+              <img>
+            </picture>
             <strong>{{ player.name }}</strong>
           </li>
         {% endif %}

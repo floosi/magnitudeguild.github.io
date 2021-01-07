@@ -48,6 +48,7 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
+    jekyll-webp (1.0.0)
     kramdown (2.3.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -85,6 +86,7 @@ DEPENDENCIES
   jekyll-responsive-image
   jekyll-seo-tag
   jekyll-sitemap
+  jekyll-webp
   rake (~> 12)
 
 RUBY VERSION

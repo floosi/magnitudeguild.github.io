@@ -1,6 +1,6 @@
 ---
-name: Foxi
+name: Amaethøn
 rank: Raider
 role: Tank
-class: Death Knight
+class: Druid
 ---
