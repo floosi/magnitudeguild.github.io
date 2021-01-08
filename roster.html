@@ -6,42 +6,15 @@ title: Roster
 {% assign healers = site.players | where: "role", "Healer" %}
 {% assign dps = site.players | where: "role", "DPS" %}
 
-<h1>{{ page.title }}</h1>
+<div class="section-pv">
 
-<section class="players">
-  <div class="container pb">
-    <h2>Tanks</h2>
-    <ul class="col col-3">
-      {% for player in tanks %}
-        <li class="{{ player.class | slugify: "latin" }}">
-          <picture class="{{ player.class | slugify: "latin" }}">
-            <source type="image/webp">
-            <img>
-          </picture>
-          <strong>{{ player.name }}</strong>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="container pv">
-    <h2>Healers</h2>
-    <ul class="col col-3">
-      {% for player in healers %}
-        <li class="{{ player.class | slugify: "latin" }}">
-          <picture class="{{ player.class | slugify: "latin" }}">
-            <source type="image/webp">
-            <img>
-          </picture>
-          <strong>{{ player.name }}</strong>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="container pv">
-    <h2>Damage Dealers</h2>
-    <ul class="col col-3">
-      {% for player in site.players %}
-        {% if player.role == 'DPS' %}
+  <h1>{{ page.title }}</h1>
+
+  <section class="players">
+    <div class="container pb">
+      <h2>Tanks</h2>
+      <ul class="col col-3">
+        {% for player in tanks %}
           <li class="{{ player.class | slugify: "latin" }}">
             <picture class="{{ player.class | slugify: "latin" }}">
               <source type="image/webp">
@@ -49,8 +22,38 @@ title: Roster
             </picture>
             <strong>{{ player.name }}</strong>
           </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
-</section>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="container pv">
+      <h2>Healers</h2>
+      <ul class="col col-3">
+        {% for player in healers %}
+          <li class="{{ player.class | slugify: "latin" }}">
+            <picture class="{{ player.class | slugify: "latin" }}">
+              <source type="image/webp">
+              <img>
+            </picture>
+            <strong>{{ player.name }}</strong>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="container pv">
+      <h2>Damage Dealers</h2>
+      <ul class="col col-3">
+        {% for player in site.players %}
+          {% if player.role == 'DPS' %}
+            <li class="{{ player.class | slugify: "latin" }}">
+              <picture class="{{ player.class | slugify: "latin" }}">
+                <source type="image/webp">
+                <img>
+              </picture>
+              <strong>{{ player.name }}</strong>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+</div>

@@ -1,25 +1,30 @@
 header {
-  position: fixed;
-  width: 280px;
-  background: $color-black;
-  padding: 0 20px;
-  height: 100vh;
+  position: relative;
+  grid-column: 2;
 
-  &::before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 100vw;
-    content: '';
-    display: block;
+  .container {
+    position: fixed;
+    width: 280px;
     background: $color-black;
-    z-index: -1;
-  }
+    // padding: 0 20px;
+    height: 100vh;
 
-  .site-branding {
-    img {
-      width: 80px;
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 100vw;
+      content: '';
+      display: block;
+      background: $color-black;
+      z-index: -1;
+    }
+
+    .site-branding {
+      img {
+        width: 80px;
+      }
     }
   }
 }

@@ -3,5 +3,7 @@
   class: button
 - name: Home
   link: /
+- name: About
+  link: /about/
 - name: Roster
   link: /roster/

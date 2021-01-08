@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script type="text/javascript" src="/assets/js/players.js"></script>
     <script rel="rubygems" href="/code.rb"></script>
@@ -12,10 +14,10 @@
     {% feed_meta %}
     {% seo %}
   </head>
-  <body class="section">
-    <div id="page" class="container">
+  <body class="{{ page.title | slugify: "latin"}}">
+    <div id="page">
       {% include header.html %}
-      <main class="section-pv">
+      <main>
         {{ content }}
       </main>
     </div>
