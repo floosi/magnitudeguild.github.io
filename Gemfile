@@ -15,7 +15,7 @@ group :jekyll_plugins do
   gem 'jekyll-feed'
   gem 'jekyll-seo-tag'
   gem 'jekyll-paginate'
-  gem 'jekyll-responsive-image'
   gem 'jekyll-autoprefixer'
   gem 'jekyll-webp'
+  gem 'jekyll_picture_tag', '~> 1.6'
 end

@@ -1,7 +1,10 @@
 <header class="">
   <div class="container section-pv ph">
     <a class="site-branding" href="/">
-      <img src="/assets/img/brand/icon.png" alt="">
+      <picture class="{{ player.class | slugify: "latin" }}">
+        <source type="image/webp" srcset="/assets/img/brand/icon.webp">
+        <img src="/assets/img/brand/icon.png">
+      </picture>
     </a>
     {% include navigation.html %}
   </div>
